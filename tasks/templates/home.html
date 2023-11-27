@@ -1,0 +1,17 @@
+{% extends 'layouts/base.html'%}
+
+{% block content %}
+<main class="container py-5">
+    <section class = "card card-body">
+        <h1 class="display-1 text-center">DJANGO APP</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quo iure, libero consequuntur fuga eum iste error minima minus corporis at voluptatem temporibus eaque. Unde voluptates sequi, quos ut vel ipsum explicabo. Blanditiis magnam ab consequuntur hic totam numquam obcaecati ipsam, quos qui recusandae amet laboriosam sunt quam illo tempora dolorem. Alias, fugit aliquid! Doloribus aperiam quisquam voluptatem nisi fuga saepe facilis aut libero recusandae maxime, culpa ad animi eius ipsum nemo ipsa earum! Veritatis quaerat veniam nostrum esse, nesciunt quidem natus fugiat dolorem est unde alias, reprehenderit laudantium dolores velit recusandae quia, dolorum numquam porro repellendus similique a? Corporis.
+        </p>
+        <div class="text-center">
+            <a href="{% url 'signup' %}" class="btn btn-secondary">Sign Up</a>
+            <a href="{% url 'login_' %}" class="btn btn-dark">Login</a>
+        </div>
+    </section>
+</main>
+
+{% endblock %}

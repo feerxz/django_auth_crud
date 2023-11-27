@@ -1,0 +1,41 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4 offset-md-4 mt-5">
+            <form method="POST" class="card card-body">
+                <h1 class="text-center">Sing Up</h1>
+                {{error}}
+            
+                {% csrf_token %} <!-- El token es importante para la seguridad de nuestro sitio y evitar que si lo clonan y envían datos, no puedan ser procesados debido a que el token no es el mismo generado por nuestro servidor-->
+            
+                <div class="mb3">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Write your username">
+                    
+                </div>
+                <br>
+                <div class="mb3">
+                    <label for="password1">Write your password:</label>
+                    <input type="password" name="password1" id="password1" class="form-control" placeholder="Write your password">
+                    
+                </div>
+                <br>
+                <div class="mb3">
+                    <label for="password2">Confirm your password:</label>
+                    <input type="password" name="password2" id="password2" class="form-control" placeholder="Confirm your password">
+                    
+                </div>  
+                <br>
+                <button class="btn btn-primary">
+                    Signup
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+<!--{{form}}--> <!--los "form" de django tienen una propiedad ".as_p" para que se vea mejor como si cada input estuviera dentro de una etiqueta "p"-->
